@@ -55,14 +55,19 @@
             <!-- ***********************HEADER + NAVIGATION ********************************- -->
             <header id="block1">
                 <nav class="navbar fixed-top navbar-expand-lg">
+                    <button class="navbar-toggler collapsed" type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarNav"
+                            aria-controls="navbarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <img  class="brand-mobile d-lg-none d-md-block" src="img/logo.png" alt="">
+                    <a class="phone-mobile d-lg-none d-md-block" href="tel:+74951354543 ">+7 (495) 135 45 43</a>
                     <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
                         <div class="collapse navbar-collapse" id="navbarNav">
-                            <a class="navbar-brand" href="#">
+                            <a class="navbar-brand" href="index.html">
                                 <img src="img/logo.png" alt="">
                             </a>
                             <ul class="navbar-nav">
@@ -70,28 +75,29 @@
                                     <a class="nav-link" href="#block1">О нас<span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#block2">Что вы получите</a>
+                                    <a class="nav-link" href="index.html#block2">Что вы получите</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#block3">Расчет прибыли</a>
+                                    <a class="nav-link" href="index.html#block3">Расчет прибыли</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="#block4">Пакеты</a>
+                                    <a class="nav-link " href="index.html#block4">Пакеты</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="#block5">Контакты</a>
+                                    <a class="nav-link " href="index.html#block5">Контакты</a>
                                 </li>
                             </ul>
                             <div class="navbar-info navbar-flex">
                                 <a class="phone" href="tel:+74951354543 ">+7 (495) 135 45 43</a>
-                                <a href="#modal-1" class="button button-header js-modal-open">Перезвонить вам?</a>
+                                <a href="#" class="button button-header" data-toggle="modal" data-target="#Modal1">Перезвонить
+                                    вам?</a>
                             </div>
                         </div>
                     </div>
                 </nav>
             </header>
         </div>
-            <section class="" style="padding-top: 200px">
+            <section class="">
                 <div class="container-fluid">
                     <h3>Заголовок</h3>
                     <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cupiditate, ea excepturi facilis impedit ipsum neque nisi quae quidem repellat similique veniam, veritatis voluptatem? At commodi in officiis porro rerum?</P>
@@ -122,9 +128,8 @@
 
 
 <!-- ************** БЛОК МОДАЛЬНЫЕ ОКНА ******************- -->
-<div class="modal_wrapper"></div>
 <!-- Modal -->
-<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalTitle" aria-hidden="true">
+<div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="ModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -134,21 +139,69 @@
             </div>
             <div class="modal-body">
                 <form class="form-main">
-                    <h2 class="title">Узнайте условия акции &nbsp;прямо сейчас</h2>
-                    <div class="subtitle mb-3">В течение 15 минут и подробно расскажет,
-                        как приобрести автомобиль на спец. условиях
+                    <h2 class="title">Заказать <br> обратный звонок</h2>
+                    <div class="subtitle"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text" class="user-input user-input-modal required" required name="user-name"
+                                   placeholder="Имя">
+                        </div>
                     </div>
-                    <input type="text" class="user-input required" required name="user-name" placeholder="Имя">
-                    <input type="text" class="user-input required" required name="user-phone"
-                           placeholder="Номер телефона">
-                    <button class="button button-white">Узнать условия акции</button>
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text" class="user-input user-input-modal required" required name="user-phone"
+                                   placeholder="Номер телефона">
+                        </div>
+                    </div>
+                    <button type="submit" class="button button-modal">Перезвонить мне</button>
                     <div class="ch_wrapper">
                         <!-- можно поменять на type="radio" -->
-                        <input id="user-check1" type="checkbox" name="user-check1" value="1" checked>
+                        <input id="user-check1" type="checkbox" name="user-check1" value="1" checked disabled>
                         <label for="user-check1">Я согласен <a href="#">с условиями</a> обработки персональных
                             данных</label>
                     </div>
-                    <input type="text" class="hidden" hidden value="Узнать условия акции">
+                    <input type="text" class="hidden" hidden value="Скачать презентацию">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="ModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered big" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-main">
+                    <h2 class="title">Заполните форму</h2>
+                    <div class="subtitle"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text" class="user-input user-input-modal required" required name="user-name"
+                                   placeholder="Имя">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <input type="email" class="user-input user-input-modal required" required name="user-mail"
+                                   placeholder="E-MAIL">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <input type="text" class="user-input user-input-modal required" required name="user-phone"
+                                   placeholder="Номер телефона">
+                        </div>
+                    </div>
+                    <button type="submit" class="button button-modal">Скачать презентацию</button>
+                    <div class="ch_wrapper">
+                        <!-- можно поменять на type="radio" -->
+                        <input id="user-check2" type="checkbox" name="user-check2" value="1" checked disabled>
+                        <label for="user-check2">Я согласен <a href="#">с условиями</a> обработки персональных
+                            данных</label>
+                    </div>
+                    <input type="text" class="hidden" hidden value="Скачать презентацию">
                 </form>
             </div>
         </div>
