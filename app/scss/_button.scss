@@ -1,0 +1,110 @@
+.button {
+  display: inline-flex;
+  width: auto;
+  min-width: 220px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  @include text-cd(18px, 400);
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap;
+  background-image: linear-gradient(to top, #01a3bc 0%, #5de0ea 100%);
+  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5) inset, 0px -1px 1px rgba(0, 0, 0, 0.5) inset;
+  transition: background-image ease 0.2s, box-shadow ease 0.2s;
+  &.button-header {
+    box-shadow: none;
+    font-size: 13px;
+    width: 227px;
+    height: 48px;
+    padding: 18px 20px 16px 62px;
+    white-space: nowrap;
+    cursor: pointer;
+    background-image: url("../img/ico/i-phone-w.svg"), linear-gradient(to top, #01a3bc 0%, #5de0ea 100%);
+    background-repeat: no-repeat;
+    background-size: 24px 24px, auto;
+    background-position: 24px, 100%;
+    &:hover, &:active, &:focus {
+      background-image: url("../img/ico/i-phone-w.svg"), linear-gradient(to bottom, #01a3bc 0%, #5de0ea 100%);
+      text-decoration: none;
+      border: none;
+      outline: none;
+    }
+  }
+
+  &:hover, &:active, &:focus {
+    background-image: linear-gradient(to bottom, #01a3bc 0%, #5de0ea 100%);
+    box-shadow: 0px -1px 1px rgba(255, 255, 255, 0.5) inset, 0px 1px 1px rgba(0, 0, 0, 0.5) inset;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    outline: none;
+  }
+  &:active {
+    box-shadow: inset 0px 2px 7px 0px rgba(0, 0, 0, 0.2);
+  }
+  &.button-modal {
+    display: block;
+    margin: 20px auto;
+    width: 330px;
+  }
+  @include media-breakpoint-down(lg) {
+    min-width: 250px;
+  }
+  @include media-breakpoint-down(xs) {
+    width: 100%;
+    max-width: 350px;
+    height: 50px;
+    padding: 0 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+.button-white {
+  background-color: #fff;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  color: #000 !important;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  @include media-breakpoint-down(xs) {
+    height: 55px;
+  }
+  &:hover {
+    background-color: $color-red;
+    background-image: none;
+    color: #fff !important;
+    border: none;
+
+  }
+
+}
+
+.button-transparent {
+  border: 1.2px solid $color-red;
+  background-color: transparent;
+  color: #292929;
+  padding-top: 26px;
+  text-transform: none;
+
+  &:hover {
+
+  }
+}
+

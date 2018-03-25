@@ -1,0 +1,49 @@
+.input-wrapper {
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+
+.user-input {
+  display: inline-block;
+  vertical-align: top;
+  border: none;
+  border-radius: 28px;
+  background-color: #eff0f4;
+  width: 100%;
+  height: 56px;
+  padding: 0;
+  margin-top: 15px;
+  outline: none;
+  color: #8b949c !important;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 30px;
+  background-color: #fff;
+  box-shadow: inset 0px 2px 7px 0px rgba(0, 0, 0, 0.4);
+  &:focus {
+    box-shadow: none;
+  }
+  &.user-input-modal {
+    height: 48px;
+    font-size: 14px;
+    box-shadow: none;
+    background-color: #eff0f4;
+  }
+  @include media-breakpoint-down(xs) {
+  height: 40px;
+  font-size: 13px;
+  max-width: 350px;
+}
+}
+
+.user-input.area {
+  width: 372px;
+  height: 115px;
+  resize: none;
+  outline: none;
+  padding: 15px;
+}
+

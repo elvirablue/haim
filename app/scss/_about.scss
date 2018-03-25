@@ -1,0 +1,52 @@
+.about {
+  h2 {
+    margin-bottom: 50px;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 30px;
+    }
+  }
+  .img-about {
+    display: block;
+    margin: 56px -30px 0 auto;
+    @include media-breakpoint-down(sm) {
+      width: 60vw;
+      max-width: 400px;
+      min-width: 250px;
+      margin: 0 auto 20px;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-top: 40px;
+    }
+  }
+  &__text-outer {
+    padding: 15px 0 0 70px;
+    @include media-breakpoint-down(md) {
+      padding: 15px 0 0 15px;
+    }
+  }
+  &__text {
+    @include text-calibri(22px, 400);
+    position: relative;
+    padding-bottom: 16px;
+    @include media-breakpoint-down(md) {
+      font-size: 18px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: -12px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $color-text;
+    }
+    span {
+      display: block;
+      font-size: 16px;
+      @include media-breakpoint-down(md) {
+        font-size: 15px;
+      }
+    }
+  }
+}

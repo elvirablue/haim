@@ -1,0 +1,42 @@
+.edu-bg {
+  margin-top: -110px;
+  min-height: 745px;
+  background: url("../img/bg-edu.png") no-repeat center top;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+    margin-top: 10px;
+    min-height: 300px;
+    height: auto;
+    padding-bottom: 30px;
+  }
+}
+.edu {
+  h2 {
+
+  }
+  &__text-outer {
+    padding: 300px 0 0 0px;
+    @include media-breakpoint-down(sm) {
+      padding: 30px;
+    }
+  }
+  &__text {
+    @include text-calibri(16px, 400);
+    position: relative;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $color-text;
+    }
+  }
+}

@@ -1,0 +1,206 @@
+$slider-width: 678px;
+$slider-height: 416px;
+.slider {
+  text-align: center;
+  min-height: 450px;
+  h2 {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .button {
+    width: 280px;
+  }
+  .text {
+    @include text(16px,300);
+    color: $color-gray;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+    }
+    @include media-breakpoint-down(xs) {
+      padding-top: 20px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    min-height: calc(100vw / 1.45);
+    padding-bottom: 80px;
+  }
+  &__wrapper {
+    position: relative;
+  }
+  .slider-item {
+    padding: 40px 50px;
+    border: 1px solid transparent;
+    @include media-breakpoint-down(md) {
+      padding:0;
+    }
+    .img {
+      width: $slider-width;
+      height: $slider-height;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: 6.304px 4.925px 29.6px 10.4px rgba(26, 39, 45, 0.08);
+      @include media-breakpoint-down(md) {
+        width: 70vw;
+        height: calc(70vw/1.63);
+        box-shadow: none;
+      }
+      @include media-breakpoint-down(xs) {
+        width: 90vw;
+        height: calc(90vw/1.63);
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+
+    }
+    @include media-breakpoint-down(xs) {
+
+    }
+  }
+  .owl-carousel {
+   display: block;
+    width: $slider-width + 100px;
+    height: $slider-height + 80px;
+    margin: 0 auto 0;
+    @include media-breakpoint-down(md) {
+      margin-top: 30px;
+      width: 70vw;
+      height: calc(70vw/1.63);
+      .owl-stage-outer {
+        height: calc(70vw/1.63);
+      }
+    }
+    @include media-breakpoint-down(xs) {
+      margin-top: 30px;
+      width: 90vw;
+      height: calc(90vw/1.63);
+      .owl-stage-outer {
+        height: calc(90vw/1.63);
+      }
+    }
+  }
+
+  .owl-carousel .owl-prev,
+  .owl-carousel .owl-next {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    margin-top: -30px;
+    left: auto;
+    right: auto;
+    font-size: 0;
+    background-image: url(../img//ico/i-arr-blue.svg);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    @include media-breakpoint-down(lg) {
+
+    }
+    @include media-breakpoint-down(xs) {
+      transform: scale(0.85);
+
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .owl-carousel .owl-prev {
+    left: -150px;
+    transform: rotate(-90deg);
+    @include media-breakpoint-down(lg) {
+      left: -55px;
+    }
+    @include media-breakpoint-down(xs) {
+      left: -8px;
+    }
+
+  }
+  .owl-carousel .owl-next {
+    right: -150px;
+    transform: rotate(90deg);
+    @include media-breakpoint-down(lg) {
+      right: -55px;
+    }
+    @include media-breakpoint-down(xs) {
+      right: -8px;
+    }
+  }
+
+  .owl-controls {
+    margin: -20px 0 0;
+  }
+
+  .owl-carousel .owl-dots {
+    width: 100%;
+    display: block;
+    text-align: center;
+    z-index: 100000;
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+
+  .owl-carousel .owl-dot {
+    display: inline-block;
+    margin: 0 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #a8acb9;
+    background-color: #fff;
+    opacity: 0.5;
+    transition:  all ease 0.3s;
+    @include media-breakpoint-down(md) {
+      margin-top: 30px;
+    }
+
+  }
+
+  .owl-carousel .owl-dot.active {
+    opacity: 0.99;
+    background-color: #a8acb9;
+  }
+}
+.slider-prev {
+  width: 185px;
+  height: 290px;
+  opacity: 0.4;
+  position: absolute;
+  top: 100px;
+  padding: 20px;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  .img {
+    width: 148px;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 6.304px 4.925px 29.6px 10.4px rgba(26, 39, 45, 0.08);
+    transition: all 0.5s ease;
+  }
+  &.before {
+    left: 6.6vw;
+    .img {
+      background-position: left center;
+    }
+
+  }
+  &.after {
+    right: 6.6vw;
+    .img {
+      background-position: right center;
+    }
+
+  }
+}

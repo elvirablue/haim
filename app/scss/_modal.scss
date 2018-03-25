@@ -1,0 +1,79 @@
+.modal {
+  &-dialog.big {
+    width: 630px;
+    max-width: 630px;
+    @include media-breakpoint-down(md) {
+      max-width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  &-dialog {
+    @include media-breakpoint-down(xs) {
+      max-width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  &-content {
+    background-color: #fff;
+    border-radius: 26px;
+  }
+  &-header {
+    border: none;
+    .close {
+      padding: 8px;
+      outline: none !important;
+      margin: -8px -8px -2rem auto;
+      span {
+        display: block;
+        width: 40px;
+        height: 40px;
+        font-size: 0;
+        background: url("../img/menu-close.svg") no-repeat center;
+        background-size: 22px;
+      }
+    }
+  }
+  &-body {
+    padding: 0 55px 30px;
+    .ch_wrapper {
+      text-align: left;
+    }
+    .user-input {
+      min-width: 245px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 0 20px 20px;
+      .user-input {
+        display: block;
+        margin: 0 auto 10px;
+        width: 100%;
+        min-width: 220px;
+      }
+      .button.button-modal {
+        width: 100%;
+        max-width: 350px;
+        margin: 10px auto;
+      }
+    }
+    .form-main {
+      max-width: 100%;
+      display: block;
+      padding: 0;
+      margin: 0 auto;
+      .title, .subtitle {
+        text-align: center;
+        @include text(32px, 300);
+        max-width: 100%;
+        @include media-breakpoint-down(md) {
+          font-size: 28px;
+        }
+        @include media-breakpoint-down(xs) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

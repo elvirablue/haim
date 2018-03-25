@@ -1,0 +1,126 @@
+.benefit {
+  background-color: $color-bg-light;
+  margin-top: 420px;
+  padding-bottom: 80px;
+  position: relative;
+  @include media-breakpoint-down(lg) {
+    margin-top: 350px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-top: 40px;
+    padding-bottom: 30px;
+  }
+  .arrow {
+    display: block;
+    width: 76px;
+    height: 76px;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 50%;
+    margin-left: -38px;
+    margin-bottom: -27px;
+    border-radius: 50%;
+    background: url("../img/arr-down.png") no-repeat center 48px;
+    background-size: 16px;
+    background-color: $color-bg-light;
+    cursor: pointer;
+  }
+
+  .img-benefit {
+    margin-top: -268px;
+    box-shadow: 6.304px 4.925px 11.84px 4.16px rgba(26, 39, 45, 0.08);
+    @include media-breakpoint-down(md) {
+      margin-top: 30px;
+    }
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+  &__title {
+    position: absolute;
+    top: -200px;
+    right: 50%;
+    margin-right: -500px;
+    width: 370px;
+    padding-top: 120px;
+    background: url("../img/b3.png") no-repeat top center;
+    background-size: auto;
+    @include media-breakpoint-down(lg) {
+      width: 40vw;
+      top: -220px;
+      margin-right: -45vw;
+      background-size: 11vw;
+      padding-top: 120px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 40vw;
+      top: 5vw;
+      margin-right: -45vw;
+      background-size: 11vw;
+      padding-top: 13vw;
+    }
+    @include media-breakpoint-down(xs) {
+      position: static;
+      width: 100%;
+    }
+    h2 {
+      font-size: 64px;
+      text-align: center;
+      span {
+        font-size: 36px;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 6vw;
+        span {
+          font-size: 3vw;
+        }
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 32px;
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  &__list {
+    margin-top: 80px;
+    padding: 0 70px;
+    @include media-breakpoint-down(lg) {
+      padding: 0 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 40px;
+      padding: 0;
+      img {
+        float: left;
+      }
+    }
+  }
+  &__text {
+    @include text-calibri(16px, 400);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 40px;
+      padding-left: 100px;
+      margin-right: 0;
+    }
+    @include media-breakpoint-down(xs) {
+      height: 90px;
+      font-size: 14px;
+      margin-bottom: 20px;
+
+    }
+  }
+}
+
+.benefit-img-left {
+  width: 100%;
+  text-align: left;
+  margin-top: -100px;
+  margin-bottom: -140px;
+  margin-left: calc((100vw - 1920px)/2);
+  position: relative;
+  z-index: 1;
+}
+
